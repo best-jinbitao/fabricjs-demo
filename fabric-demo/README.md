@@ -1,4 +1,4 @@
-# learn-fabricjs
+# fabric-demo
 
 ## Project setup
 ```
