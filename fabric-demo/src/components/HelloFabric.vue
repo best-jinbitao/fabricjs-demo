@@ -16,8 +16,6 @@
       <button type="button" class="button">形状填充</button>
       <button type="button" class="button">轮廓颜色</button>
       <button type="button" class="button">轮廓填充</button>
-      <br />
-      <button type="button" class="button">缩小</button>
       <button type="button" class="button">形状填充</button>
       <button type="button" class="button">轮廓填充</button>
     </div>
