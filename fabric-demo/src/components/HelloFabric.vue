@@ -1,6 +1,26 @@
 <template>
   <div style="width:100%">
-    <div class="palette" style="">调色板</div>
+    <div class="palette">
+      <button type="button" class="button">画笔</button>
+      <button type="button" class="button">直线</button>
+      <button type="button" class="button">折线</button>
+      <button type="button" class="button">矩形</button>
+      <button type="button" class="button">三角形</button>
+      <button type="button" class="button">圆形</button>
+      <button type="button" class="button">椭圆</button>
+      <button type="button" class="button">更多图形</button>
+      <button type="button" class="button">文本</button>
+      <button type="button" class="button">放大</button>
+      <button type="button" class="button">缩小</button>
+      <button type="button" class="button">填充颜色</button>
+      <button type="button" class="button">形状填充</button>
+      <button type="button" class="button">轮廓颜色</button>
+      <button type="button" class="button">轮廓填充</button>
+      <br />
+      <button type="button" class="button">缩小</button>
+      <button type="button" class="button">形状填充</button>
+      <button type="button" class="button">轮廓填充</button>
+    </div>
     <div class="my-canvas">
       <canvas id="canvas" class="ctx"></canvas>
     </div>
@@ -31,6 +51,7 @@ export default {
       });
     });
     this.init();
+    // this.drawLine();
   },
   methods: {
     init() {
@@ -38,9 +59,8 @@ export default {
         width: 1000,
         height: 600
       });
-      // this.canvas.defaultCursor = "move";
-      // this.canvas.hoverCursor = "pointer";
-
+    },
+    drawLine() {
       const longer =
         window.innerWidth > window.innerHeight
           ? window.innerWidth
@@ -74,16 +94,32 @@ export default {
 </script>
 
 <style scoped>
+.button {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: 1px solid rgb(173, 175, 177);
+  margin: 1px;
+  border-radius: 8px;
+  outline: none;
+}
+.button:focus {
+  border: 2px solid rgb(83, 135, 187);
+}
+
 .ctx {
   width: 5000px;
   height: 5000px;
   border: 1px solid black;
 }
 .palette {
+  display: flex;
+  flex-wrap: wrap;
   width: 998px;
   height: 100px;
   margin: 5px auto;
-  border: 1px solid;
+  border: 1px solid #9e9fa0;
+  background: rgb(229, 228, 226);
 }
 .my-canvas {
   text-align: center;
